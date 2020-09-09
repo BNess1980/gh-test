@@ -2,7 +2,7 @@
 Run `npm install`
 Run `ng serve`
 
-# GuidehouseTestNess
+# GH Test Ness
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
 
