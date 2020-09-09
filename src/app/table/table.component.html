@@ -1,0 +1,32 @@
+<header>
+  <h2 class="bd-title">Table Component</h2>
+</header>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Case Id</th>
+      <th scope="col">Case #</th>
+      <th scope="col">Name</th>
+      <th scope="col">Case Type Id</th>
+      <th scope="col">Case Created On</th>
+      <th scope="col">Item Amount</th>
+      <th scope="col">Locked</th>
+      <th scope="col">Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of data">
+      <td>
+        <a [routerLink]="['/case-detail', item.CaseID]">{{ item.CaseID }}</a>
+      </td>
+      <td>{{ item.CaseNumber }}</td>
+      <td>{{ item.CaseName }}</td>
+      <td>{{ item.CaseTypeID }}</td>
+      <td>{{ item.CreatedOn | date: "shortDate" }}</td>
+      <td>{{ item.ItemAmount }}</td>
+      <td><i *ngIf="item.IsLocked" class="fas fa-lock"></i></td>
+      <td>{{ item.Score }}</td>
+    </tr>
+  </tbody>
+</table>

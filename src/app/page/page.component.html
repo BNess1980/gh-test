@@ -1,0 +1,30 @@
+<header class="d-flex justify-content-between">
+  <h2 class="bd-title">Page Component for Case # {{ caseId }}</h2>
+  <button class="btn btn-secondary" [routerLink]="['/']">Return Home</button>
+</header>
+
+<div class="card">
+  <div class="card-header">{{ case.CaseName }}</div>
+  <div class="card-body">
+    <div class="card-text">
+      <p>Case Number:{{ case.CaseNumber }}</p>
+      <p>Case Type Id:{{ case.CaseTypeID }}</p>
+      <p>Case View Group:{{ case.CaseViewTabGroupID }}</p>
+      <p>Client Case Label 1:{{ case.ClientCaseLabel1 }}</p>
+      <p>Client Case Label 2:{{ case.ClientCaseLabel2 }}</p>
+      <p>Client Case Label 3:{{ case.ClientCaseLabel3 }}</p>
+      <p>Client Case Label 4:{{ case.ClientCaseLabel4 }}</p>
+      <p>Client Case Label 6:{{ case.ClientCaseLabel6 }}</p>
+      <p>Config Name:{{ case.ConfigurationName }}</p>
+      <p>Created By:{{ case.CreatedByUserID }}</p>
+      <p>Created On:{{ case.CreatedOn | date: "shortDate" }}</p>
+      <p>Follow Up:{{ case.FollowUpFlag }}</p>
+      <p>IsLocked:{{ case.IsLocked }}</p>
+      <p>Item Amt:{{ case.ItemAmount }}</p>
+      <p>Item Count:{{ case.ItemCount }}</p>
+      <p>Linked Case Id:{{ case.LinkedCaseID }}</p>
+      <p>SARType Id:{{ case.SARTypeID }}</p>
+      <p>Score:{{ case.Score }}</p>
+    </div>
+  </div>
+</div>
